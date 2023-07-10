@@ -69,7 +69,7 @@ class FeatureExtractor(nn.Module):
         
 
     def forward(self, image_data):
-        print(image_data.shape)
+        # print(image_data.shape)
         x = self.conv(image_data)   
             
         for attn in self.layers:
