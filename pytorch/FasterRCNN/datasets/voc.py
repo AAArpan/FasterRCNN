@@ -62,7 +62,7 @@ class Dataset:
     20: "tvmonitor"
   }
 
-  def __init__(self, split, image_preprocessing_params, compute_feature_map_shape_fn, feature_pixels = 16, dir = r"C:\Users\arpan\Downloads\FasterRCNN-master\pytorch\FasterRCNN\datasets\VOCdevkit\VOC2007", augment = True, shuffle = True, allow_difficult = False, cache = True):
+  def __init__(self, split, image_preprocessing_params, compute_feature_map_shape_fn, feature_pixels = 16, dir = "/kaggle/working/VOCdevkit/VOC2007", augment = True, shuffle = True, allow_difficult = False, cache = True):
     """
     Parameters
     ----------
