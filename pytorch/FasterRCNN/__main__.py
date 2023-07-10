@@ -142,7 +142,7 @@ def train(model):
   print("Final weights file: %s" % ("none" if not options.save_to else options.save_to))
   print("Best weights file : %s" % ("none" if not options.save_best_to else options.save_best_to))
   training_data = voc.Dataset(
-    dir = r"C:\Users\arpan\Downloads\FasterRCNN-master\pytorch\FasterRCNN\datasets\VOCdevkit\VOC2007",
+    dir = "/kaggle/working/FasterRCNN",
     split = options.train_split,
     image_preprocessing_params = model.backbone.image_preprocessing_params,
     compute_feature_map_shape_fn = model.backbone.compute_feature_map_shape,
