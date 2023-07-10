@@ -41,7 +41,7 @@ def render_anchors(backbone):
     image_preprocessing_params = backbone.image_preprocessing_params,
     compute_feature_map_shape_fn = backbone.compute_feature_map_shape,
     feature_pixels = backbone.feature_pixels,
-    dir = r"C:\Users\arpan\Downloads\FasterRCNN-master\pytorch\FasterRCNN\datasets\VOCdevkit\VOC2007",
+    dir = "/kaggle/working/VOCdevkit/VOC2007",
     split = options.train_split,
     augment = False,
     shuffle = False
@@ -66,7 +66,7 @@ def evaluate(model, eval_data = None, num_samples = None, plot = False, print_av
       image_preprocessing_params = model.backbone.image_preprocessing_params,
       compute_feature_map_shape_fn = model.backbone.compute_feature_map_shape,
       feature_pixels = model.backbone.feature_pixels,
-      dir = r"C:\Users\arpan\Downloads\FasterRCNN-master\pytorch\FasterRCNN\datasets\VOCdevkit\VOC2007",
+      dir = "/kaggle/working/VOCdevkit/VOC2007",
       split = options.eval_split,
       augment = False,
       shuffle = False
@@ -152,7 +152,7 @@ def train(model):
     cache = options.cache_images
   )
   eval_data = voc.Dataset(
-    dir = r"C:\Users\arpan\Downloads\FasterRCNN-master\pytorch\FasterRCNN\datasets\VOCdevkit\VOC2007",
+    dir = "/kaggle/working/VOCdevkit/VOC2007",
     split = options.eval_split,
     image_preprocessing_params = model.backbone.image_preprocessing_params,
     compute_feature_map_shape_fn = model.backbone.compute_feature_map_shape,
@@ -246,7 +246,7 @@ def predict_all(model, split):
     os.makedirs(dirname)
   print("Rendering predictions from '%s' set to '%s'..." % (split, dirname))
   dataset = voc.Dataset(
-    dir = r"C:\Users\arpan\Downloads\FasterRCNN-master\pytorch\FasterRCNN\datasets\VOCdevkit\VOC2007",
+    dir = "/kaggle/working/VOCdevkit/VOC2007",
     split = split,
     image_preprocessing_params = model.backbone.image_preprocessing_params,
     compute_feature_map_shape_fn = model.backbone.compute_feature_map_shape,
