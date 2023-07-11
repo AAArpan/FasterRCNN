@@ -125,7 +125,7 @@ class WaveMixBackbone(Backbone):
     self.feature_map_channels = 512
     self.feature_pixels = 16
     self.feature_vector_size = 4096
-    self.image_preprocessing_params = image.PreprocessingParams(channel_order = image.ChannelOrder.BGR, scaling = 1.0, means = [ 103.939, 116.779, 123.680 ], stds = [ 1, 1, 1 ])
+    self.image_preprocessing_params = image.PreprocessingParams(channel_order = image.ChannelOrder.BGR, scaling = 1.0 / 255.0, means = [ 0.485, 0.456, 0.406 ], stds = [ 0.229, 0.224, 0.225 ])
     
     state_dict = load_state_dict_from_url('https://huggingface.co/cloudwalker/wavemix/resolve/main/Saved_Models_Weights/ImageNet/imagenet_71.49.pth')
     WaveMix = FeatureExtractor()
